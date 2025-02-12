@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+nextjs 15 + tailwind 4 + shadcn
 
-## Getting Started
+참조 : taliwindtcss 4.0
+https://www.youtube.com/watch?v=7IK9j9-H0vQ&list=LL&index=6
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+참조 : https://tailwindcss.com/docs/installation/framework-guides/nextjs
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+create-next-app@latest my-project --typescript --eslint --app
+Tailwind css --> NO
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+npm install tailwindcss @tailwindcss/postcss postcss
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+postcss.config.mjs 루트 파일에 생성
+const config = {
+  plugins: {
+    "@tailwindcss/postcss": {},
+  },
+};
+export default config;
 
-## Learn More
+globals.css
+@import "tailwindcss";
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+참조 : https://ui.shadcn.com/docs/tailwind-v4
+이거 안함 ㅎ : pnpm create next-app@canary --tailwind --eslint --typescript --app --no-src-dir
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+설치 : npm install -g pnpm
+pnpm dlx shadcn@canary init
+pnpm dlx shadcn@canary add --all

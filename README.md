@@ -29,5 +29,6 @@ pnpm dlx shadcn@canary init
 pnpm dlx shadcn@canary add --all
 
 # theme 적용 참조 사이트
-
 https://github.com/voidcontests/frontend/tree/tailwind/v4
+# 나중에 테마 사용시 아래 shadcn 으로 하는게 좋을뜻 ㅎㅎㅎ
+https://ui.shadcn.com/docs/tailwind-v4

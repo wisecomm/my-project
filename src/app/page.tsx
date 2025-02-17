@@ -4,8 +4,8 @@ import { Input } from "@/components/ui/input";
 
 export default function Home() {
   return (
-    <div className="bg-deepblue container">
-      <h1 className="text-5xl font-bold text-white">Welcome to</h1>
+    <div className="container">
+      <h1 className="text-5xl font-bold text-alabaster">Welcome to</h1>
       <Button className="bg-amber border-4 text-2xl font-bold mt-12 rounded px-6">
         shadcn button
       </Button>

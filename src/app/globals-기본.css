@@ -1,7 +1,17 @@
 @import "tailwindcss";
 
 /* 기본 테마로 사용 */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+  }
+}
+ 
 @theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
   --deepblue-500: #023047;
   --amber-500: #fb8500;
   --alabaster-500: #e0e1dd;
@@ -14,13 +24,14 @@
 .bg-amber {
   background-color: var(--amber-500);
 }
-.text-alabaster-500 {
+.text-alabaster {
   color: var(--alabaster-500);
 }
 
 .text-amber {
   color: var(--amber-500);
 }
+
 
 @utility container {
   padding: 20px;

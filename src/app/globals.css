@@ -1,17 +1,46 @@
 @import "tailwindcss";
 
-@theme {
-  --font-display: "Poppins", sans-serif;
-  --font-logo: "Roboto", sans-serif;
+@import "../styles/theme.css";
 
-  --text-logo: 1.5rem;
-  --text-logo--font-weight: 700;
+@custom-variant dark (&:is(.dark *));
 
-  --text-big: 6rem;
-  --text-big--font-weight: 700;
-  --text-big--letter-spacing: -0.025em;
+@utility container {
+  padding: 20px;
+  max-width: 1280px;
+  margin: auto;
+}
 
-  --color-background-100: #764abc;
-  --color-lilac-100: #eabad2;
-  --color-light-100: #eae3f5;
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@layer base {
+  * {
+    /* @apply border-border; */
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* ::selection {
+    background-color: --alpha(var(--color-blue-400) / 20%);
+  }
+
+  ::-moz-selection {
+    background-color: --alpha(var(--color-blue-400) / 20%);
+  } */
+}
+
+.bg-deepblue {
+  background-color: var(--deepblue-500);
+}
+.bg-amber {
+  background-color: var(--amber-500);
+}
+.text-alabaster {
+  color: var(--alabaster-500);
+}
+.text-amber {
+  color: var(--amber-500);
 }

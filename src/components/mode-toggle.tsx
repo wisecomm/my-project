@@ -2,14 +2,14 @@
 
 import * as React from "react";
 import { useTheme } from "next-themes";
-import { MoonIcon, SunIcon } from "lucide-react"
+import { MoonIcon, SunIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-  TooltipProvider
+  TooltipProvider,
 } from "@/components/ui/tooltip";
 
 export function ModeToggle() {
